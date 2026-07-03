@@ -1,9 +1,9 @@
 # 🎵 Music Player –Java Full‑Stack Web Application
 
 A modern, scalable **full‑stack music player web application** built with **Java Spring Boot**, **React.js**, **MongoDB**, and **Tailwind CSS**. The application supports secure authentication, music streaming, playlist management, and cloud‑based media storage using **Cloudinary**.
-
 ---
 
+*************Image OF UI:*********************
 ## 🚀 Features
 
 * 🔐 **JWT‑based Authentication & Authorization**
