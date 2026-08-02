@@ -43,6 +43,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             return;
         }
 
+        // Allow CORS preflight requests
+        if ("OPTIONS".equalsIgnoreCase(request.getMethod())) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+
         // Missing or invalid Authorization header
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);

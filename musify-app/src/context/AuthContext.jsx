@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 
 export const AuthContext = createContext();
-export const API_BASE_URL = "http://localhost:8081";
+export const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8081";
 
 export const useAuth = () => {
     const context = useContext(AuthContext);
@@ -13,7 +13,7 @@ export const useAuth = () => {
 };
 
 export const AuthProvider = ({ children }) => {
-    const API_BASE_URL = "http://localhost:8081";
+    const API_URL = API_BASE_URL;
 
     const [user, setUser] = useState(null);
     const [token, setToken] = useState(localStorage.getItem("userToken"));
